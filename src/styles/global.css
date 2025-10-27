@@ -1,0 +1,33 @@
+:root {
+  --color-bg: #0a1b2a;
+  --color-text: #f2f2f2;
+  --color-accent: #ff4040;
+  --color-accent-dark: #c32f2f;}
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+  color: var(--color-accent);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+
+

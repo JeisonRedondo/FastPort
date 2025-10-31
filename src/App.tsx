@@ -1,13 +1,8 @@
-import './App.css'
+import { AppRouter } from './routes/AppRouter'
 
 function App() {
 
-  return (
-    <>
-      <h1>FastPort</h1>
-      <p>Tu portafolio de productos, facil y rapido</p>
-    </>
-  )
+  return <AppRouter/>
 }
 
 export default App

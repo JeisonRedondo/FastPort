@@ -1,0 +1,35 @@
+/* DashboardOverview.css */
+.overview-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.overview-card {
+  background-color: #1f1f2e; /* tono oscuro más claro que el fondo base */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-text-light);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+  border-color: var(--color-accent);
+}
+
+.overview-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.overview-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+

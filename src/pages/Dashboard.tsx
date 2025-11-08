@@ -1,7 +1,8 @@
 import Sidebar from "../components/Dashboard/Sidebar";
 import Header from "../components/Dashboard/Header";
 import MainContent from "../components/Dashboard/MainContent";
-import "./Dashboard.css"
+import "./Dashboard.css";
+import DashboardOverview from "../components/Dashboard/DashboardOverview";
 
 function Dashboard() {
   return (
@@ -10,6 +11,7 @@ function Dashboard() {
       <div className="dashboard-main">
         <Header />
         <MainContent />
+        <DashboardOverview />
       </div>
     </section>
   );

@@ -1,13 +1,13 @@
-import ProductShowcase from "../components/ProductShowcase/ProductShowcase";
-import CardUser from "../components/UserCard";
+import "./Home.css";
+import HeroSection from "../components/Home/HeroSection.tsx";
+import FeaturesSection from "../components/Home/FeaturesSection.tsx";
 
 function Home() {
   return (
-    <div>
+    <div className="home-container">
       <h1>🏠 Bienvenido a FastPort</h1>
-      <p>Tu espacio para crear portafolios de productos.</p>
-      <CardUser/>
-      <ProductShowcase/>
+      <HeroSection />
+      <FeaturesSection />
     </div>
   );
 }

@@ -1,0 +1,47 @@
+.home-container{
+  width: 100vw;
+  display:grid;
+  grid-auto-columns: minmax(auto,800px);
+  justify-content: space-around;
+}
+.hero-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+.hero-content {
+  max-width: 400px;
+}
+
+.hero-btn {
+  background: var(--color-accent);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition-speed);
+}
+
+.hero-btn:hover {
+  background: var(--color-accent-dark);
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.feature {
+  text-align: center;
+  background: #101c2d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #00000040;
+}
+

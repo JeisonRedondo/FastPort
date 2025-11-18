@@ -15,6 +15,14 @@
   /* ✨ Otros */
   --transition-speed: 0.3s;
   --border-radius: 8px;
+  /* añade al :root en global.css */
+  --color-surface: #0f2432;
+  /* tarjetas / secciones (ligeramente más claras) */
+  --color-card: #101c2d;
+  /* ya usado en features */
+  --accent-soft: rgba(176, 42, 48, 0.12);
+  /* sombra / glow suave */
+  --muted-text: rgba(224, 224, 224, 0.8);
 }
 
 * {

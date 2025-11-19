@@ -42,12 +42,6 @@
   opacity: 0.9;
 }
 
-.home-container {
-  width: 100vw;
-  display: grid;
-  grid-auto-columns: minmax(auto, 800px);
-  justify-content: space-around;
-}
 
 .hero-section {
   display: flex;

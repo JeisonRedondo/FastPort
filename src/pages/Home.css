@@ -70,21 +70,54 @@
   margin: 0;
 }
 
-.hero-btn {
-  max-width: 200px;
-  background: var(--color-accent);
-  color: white;
-  padding: 0.9rem 1.6rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  /* acento suave */
-  box-shadow: 0 8px 20px var(--accent-soft);
-  align-self: flex-start;
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.hero-btn:hover {
-  background: var(--color-accent-dark);
+.btn-primary, .btn-secondary {
+  padding: 0.85rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Principal */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 20px var(--accent-soft);
+}
+.btn-primary:hover {
+  transform: translateY(-4px);
+}
+
+/* Secundario */
+.btn-secondary {
+  background: transparent;
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
+}
+.btn-secondary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px var(--accent-soft);
+}
+
+/* Parallax efecto sutil */
+.tilt-layer {
+  transform: perspective(800px);
+  will-change: transform;
+  transition: transform .3s ease-out;
+}
+
+.hero-section:hover .tilt-layer {
+  transform: perspective(800px)
+    rotateY(4deg)
+    translateY(-4px);
 }
 
 .hero-image {

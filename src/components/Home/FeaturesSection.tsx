@@ -1,16 +1,30 @@
 export default function FeaturesSection() {
   return (
-    <section className="feature-section">
+    <section className="feature-section scroll-fade">
       <article className="feature">
-        <img src="https://picsum.photos/200/150" alt="Feature 1" />
-        <h3>Muestra tus productos virtualmente</h3>
-        <p>Productos más visuales y atractivos.</p>
+        <div className="feature-icon">⚡</div>
+        <div>
+          <h3>Crea tu portafolio en minutos</h3>
+          <p>Sin código, sin complicaciones.</p>
+        </div>
       </article>
+
       <article className="feature">
-        <img src="https://picsum.photos/200/150" alt="Feature 2" />
-        <h3>Actualiza a tus clientes</h3>
-        <p>Comparte cambios y novedades fácilmente.</p>
+        <div className="feature-icon">🎨</div>
+        <div>
+          <h3>Diseños modernos</h3>
+          <p>Plantillas elegantes para todos los perfiles.</p>
+        </div>
+      </article>
+
+      <article className="feature">
+        <div className="feature-icon">🚀</div>
+        <div>
+          <h3>Publicación instantánea</h3>
+          <p>Comparte tu portafolio con un link.</p>
+        </div>
       </article>
     </section>
   );
 }
+

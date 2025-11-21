@@ -179,7 +179,6 @@
   padding: 1.8rem;
   border-radius: 12px;
   box-shadow: 0 4px 18px rgba(0,0,0,.35);
-  transition: fadeUp .25s ease, box-shadow .25s ease;
 }
 
 .feature-icon {
@@ -192,9 +191,10 @@
   box-shadow: 0 10px 26px rgba(0,0,0,.45);
 }
 
-.feature.scroll-visible {
-  opacity: 1;
-  transform: translateY(0);
+
+.scroll-visible {
+  animation-delay: 0.5s;
+  animation: fadeUp 0.9s ease-out forwards;
 }
 
 @keyframes fadeUp {

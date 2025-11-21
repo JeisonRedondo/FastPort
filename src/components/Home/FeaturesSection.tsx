@@ -1,23 +1,24 @@
+import { MonitorPlay, ChatCircleDots } from "phosphor-react";
 export default function FeaturesSection() {
   return (
-    <section className="feature-section scroll-fade">
-      <article className="feature">
-        <div className="feature-icon">⚡</div>
+    <section className="feature-section ">
+      <article className="feature ">
+        <MonitorPlay size={42} weight="fill" className="feature-icon" />
         <div>
           <h3>Crea tu portafolio en minutos</h3>
           <p>Sin código, sin complicaciones.</p>
         </div>
       </article>
 
-      <article className="feature">
-        <div className="feature-icon">🎨</div>
+      <article className="feature ">
+        <ChatCircleDots size={42} weight="fill" className="feature-icon" />
         <div>
           <h3>Diseños modernos</h3>
           <p>Plantillas elegantes para todos los perfiles.</p>
         </div>
       </article>
 
-      <article className="feature">
+      <article className="feature ">
         <div className="feature-icon">🚀</div>
         <div>
           <h3>Publicación instantánea</h3>
@@ -27,4 +28,3 @@ export default function FeaturesSection() {
     </section>
   );
 }
-

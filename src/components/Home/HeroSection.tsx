@@ -2,12 +2,12 @@ export default function HeroSection() {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h2>Lleva tus productos al mundo digital</h2>
+        <h2 className="hero-title">Lleva tus productos al mundo digital</h2>
         <p>Muestra, organiza y vende lo que haces con pasión.</p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">Publicar productos</button>
-          <button className="btn-secondary">Ver tiendas reales</button>
+          <button className="hero-btn btn-primary">Publicar productos</button>
+          <button className="hero-btn btn-secondary">Ver tiendas reales</button>
         </div>
       </div>
 

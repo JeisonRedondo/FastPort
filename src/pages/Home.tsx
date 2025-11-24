@@ -6,12 +6,13 @@ import { useEffect } from "react";
 function Home() {
   useEffect(() => {
     const features = document.querySelectorAll(".feature");
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("scroll-visible");
+            observer.unobserve(entry.target);
           }
         });
       },

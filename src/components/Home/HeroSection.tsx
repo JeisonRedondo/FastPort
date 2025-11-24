@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function HeroSection() {
+  const [loaded, setLoaded] = useState(false);
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -12,12 +15,14 @@ export default function HeroSection() {
       </div>
 
       <figure className="hero-image tilt-layer">
+        {!loaded && <div className="skeleton" />}
         <img
           src="https://picsum.photos/480/340"
           alt="Ejemplo de portafolio"
+          onLoad={() => setLoaded(true)}
+          className={loaded ? "visible" : ""}
         />
       </figure>
     </section>
   );
 }
-

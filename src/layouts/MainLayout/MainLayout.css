@@ -1,4 +1,4 @@
-.mainlayout-section{
+.mainlayout-section {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -45,17 +45,104 @@
   font-size: 0.9rem;
   bottom: 0px;
 }
+
 .nav-list_options {
   display: flex;
   flex-direction: row;
-  gap:1.2rem;
+  gap: 1.2rem;
 }
 
-.nav-list_options a{
+.nav-list_options a {
   color: var(--color-text-light);
+}
+
+.nav-list_button {
+  display: none;
 }
 
 .nav-user_options {
   display: flex;
   gap: 1.2rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(25px);
+  }
+}
+
+@keyframes hiddenUp {
+  0% {
+    opacity: 1;
+    transform: translateY(25px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-list_options {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100vw;
+    padding: 0 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 50;
+  }
+
+  .nav-list_options a {
+    width: 100%;
+    padding: 10px 16px;
+    background: #0b1320;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--color-text-light);
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      border 0.25s ease;
+  }
+
+  .nav-list_options a:hover {
+    background: rgba(100, 180, 255, 0.12);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .nav-list_button {
+    border: none;
+    background: transparent;
+    color: inherit;
+    display: flex;
+  }
+
+  .reveal {
+    animation: fadeUp 0.4s ease-out forwards;
+  }
+
+  .hidden {
+    animation: hiddenUp 0.3s ease-in forwards;
+  }
+
+  .close {
+    visibility: hidden;
+    pointer-events: none;
+  }
 }

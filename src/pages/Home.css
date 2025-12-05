@@ -227,7 +227,7 @@
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column-reverse;
-    text-align: center;
+    text-align: center; 
   }
 
   .hero-image {

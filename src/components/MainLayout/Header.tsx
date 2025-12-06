@@ -2,39 +2,25 @@ import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export default function Header() {
-  const [reveal, setReveal] = useState(false);
-  const [closing, setClosing] = useState(true);
   const isMobile = useMediaQuery("(max-width: 760px)");
+
+  const [hasInteracted,setHasInteracted] = useState(false)
+  const [reveal, setReveal] = useState(false);
 
   const handleOptionsNav = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    setHasInteracted(true)
     setReveal((reveal) => !reveal);
   };
 
-  const navOptions = useRef<HTMLElement>(null);
-
   useEffect(() => {
     if (!isMobile) {
-      setReveal(true)
-      setClosing(false)
-    }else {
-      setClosing(true)
-      setReveal(false)
+      setReveal(true);
+      setHasInteracted(false)
+    } else {
+      setReveal(false);
     }
   }, [isMobile]);
-
-
-  useEffect(() => {
-    if (!reveal) {
-      const timeout = setTimeout(() => {
-        setClosing(true);
-      }, 900);
-
-      return () => clearTimeout(timeout);
-    } else {
-      setClosing(false);
-    }
-  }, [reveal]);
 
   return (
     <header className="header">
@@ -42,8 +28,10 @@ export default function Header() {
         <h1 className="logo">FastPort</h1>
       </article>
       <nav
-        ref={navOptions}
-        className={`nav-list_options ${closing ? "close" : ""} ${reveal ? "reveal" : "hidden"} `}
+        className={!isMobile ? "nav-list_options reveal" : 
+                      !hasInteracted ? "close" :
+                        reveal ? "nav-list_options reveal" :
+                        "nav-list_options hidden"}
       >
         <a href="#">Products</a>
         <a href="#">Contact us</a>

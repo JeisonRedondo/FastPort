@@ -1,4 +1,4 @@
-import { MonitorPlay, ChatCircleDots } from "phosphor-react";
+import { MonitorPlay, ChatCircleDots, RocketLaunch } from "phosphor-react";
 export default function FeaturesSection() {
   return (
     <section className="feature-section ">
@@ -19,7 +19,7 @@ export default function FeaturesSection() {
       </article>
 
       <article className="feature ">
-        <div className="feature-icon">🚀</div>
+        <RocketLaunch size={42} weight="fill" className="feature-icon" />
         <div>
           <h3>Publicación instantánea</h3>
           <p>Comparte tu portafolio con un link.</p>

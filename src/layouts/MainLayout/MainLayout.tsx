@@ -4,16 +4,12 @@ import "./MainLayout.css";
 import Header from "../../components/MainLayout/Header";
 import Footer from "../../components/MainLayout/Footer";
 
-interface MainLayoutProps {
-  children?: ReactNode;
-}
 
-function MainLayout({ children }: MainLayoutProps) {
+function MainLayout() {
   return (
     <section className="mainlayout-section">
       <Header />
       <main>
-        {children}
         <Outlet />
       </main>
       <Footer/>

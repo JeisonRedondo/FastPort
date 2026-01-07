@@ -54,7 +54,6 @@
   opacity: 0;
   animation: fadeUp 0.9s ease-out forwards;
   animation-delay: 0.05s;
-  overflow: hidden;
 }
 
 .hero-title {
